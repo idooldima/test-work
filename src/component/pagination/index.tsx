@@ -1,10 +1,4 @@
-import {
-  PaginationItem,
-  Pagination as BootstrapPagination,
-  PaginationLink,
-  Row,
-  Col,
-} from 'reactstrap';
+import { PaginationItem, Pagination as BootstrapPagination, PaginationLink, Col } from 'reactstrap';
 import { isFunction, size } from 'lodash';
 type Props = {
   curPage: number;
