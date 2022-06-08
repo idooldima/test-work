@@ -10,10 +10,10 @@ export type UserType = {
   description: string;
 };
 
-export type Users = UserType[];
+export type UsersType = UserType[];
 
 export type UserStateType = {
-  data: Users;
+  data: UsersType;
   isLoading: boolean;
   error: null;
 };

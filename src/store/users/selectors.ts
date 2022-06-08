@@ -1,4 +1,4 @@
 import { ReduxStoreType } from '../types';
-import { Users } from './types';
+import { UsersType } from './types';
 
-export const usersListSelector = (state: ReduxStoreType): Users => state.users.data;
+export const usersListSelector = (state: ReduxStoreType): UsersType => state.users.data || [];

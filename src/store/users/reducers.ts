@@ -1,4 +1,4 @@
-import { Users, UserStateType } from './types';
+import { UsersType, UserStateType } from './types';
 import initialState from './state';
 import { createReducer } from 'redux-act';
 import { getUsersError, getUsersStart, getUsersSuccess } from './actions';
@@ -8,7 +8,7 @@ export const onGetUsersStart = (state: UserStateType) => ({
   isLoading: true,
 });
 
-export const onGetUserSucces = (state: UserStateType, payload: { users: Users }) => ({
+export const onGetUserSucces = (state: UserStateType, payload: { users: UsersType }) => ({
   ...state,
   data: payload.users,
   isLoading: false,

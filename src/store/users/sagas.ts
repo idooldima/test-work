@@ -5,21 +5,10 @@ import { getUsersError, getUsersStart, getUsersSuccess } from './actions';
 
 export const getUsersSaga = function* (): SagaIterator {
   try {
-    // const result = yield call(axios.get, 'https://api.github.com/repositories');;
+    const result = yield call(axios.get, 'https://api.github.com/repositories');
     yield put(
       getUsersSuccess({
-        // users: result.data
-        users: Array(6).fill({
-          id: 2,
-          name: 'owner name',
-          full_name: ' repo name',
-          owner: {
-            id: 2,
-            avatar_url: 'https://picsum.photos/318/180',
-            repos_url: 'repo url',
-          },
-          description: 'description',
-        }),
+        users: result.data,
       })
     );
   } catch (error: any) {
